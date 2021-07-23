@@ -3,16 +3,6 @@ from django.contrib.auth.models import User
 from django.utils.translation import gettext as _
 from django.contrib.staticfiles.templatetags.staticfiles import static
 
-# from .views import make_thumbnail
-
-class MyModel(models.Model):
-    image = models.ImageField()
-    thumbnail = models.ImageField()
-
-    def save(self, *args, **kwargs):
-        self.thumbnail = make_thumbnail(self.image, size=(100, 100))
-
-        super().save(*args, **kwargs)
 
 class Profile(models.Model):
     GENDER_MALE = 1

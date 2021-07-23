@@ -7,32 +7,33 @@ Django project that allows basic login/logout functionality.
 ## Usage
 
 ```bash
-$ # Clone
-$ git clone https://github.com/app-generator/django-user-profile.git
-$ cd django-user-profile
-$
-$ # Create virtual environment (Unix based systems)
-$ virtualenv env
-$ source env/bin/activate
-$
-$ # Virtualenv modules installation (Windows based systems)
-$ python -m virtualenv env
-$ .\env\Scripts\activate
-$
-$ # Install required modules
-$ pip install -r requirements.txt
-$
-$ # Create tables
-$ python manage.py makemigrations
-$ python manage.py migrate
-$
-$ # Start application 
-$ python manage.py runserver
-$
-$ # Starting the app in custom port if 8000 is occupied
-$ python manage.py runserver 0.0.0.0:<your_port>
-$
-$ # Access in browser: http://127.0.0.1:8000/
+# Clone
+git clone https://github.com/BlankDevs/django-en.git
+cd django-en
+
+# Create virtual environment (Unix based systems)
+virtualenv env
+source env/bin/activate
+
+# Virtualenv modules installation (Windows based systems)
+python -m virtualenv env
+.\env\Scripts\activate
+
+# Install required modules
+pip install -r requirements.txt
+
+# Create tables
+python manage.py makemigrations
+python manage.py migrate
+
+# Start application 
+python manage.py runserver
+
+# Starting the app in custom port if 8000 is occupied
+python manage.py runserver 0.0.0.0:<your_port>
+
+# Access in browser: 
+http://localhost:8000/login/
 ```
 
 > You will need to register first before you can use it.
@@ -81,7 +82,7 @@ ROOT DIR
 -customers/                                                 # App that deals with the user profile
 |            -templates/
 |                        -customers/
-|                                    -profile.html
+|                                   -profile.html
 |            -admin.py
 |            -forms.py
 |            -urls.py
@@ -95,6 +96,4 @@ ROOT DIR
 |
 -requirements.txt                                           # Modules required before running.
 |
-```
-return self.avatar.url if self.avatar else static('assets/img/team/default-profile-picture.png')
 ```
