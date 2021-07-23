@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- Primary Meta Tags -->
+<title>
+    Enlabeler - {% block title %}{% endblock %}
+</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="title" content="Free Bootstrap 5 Dashboard">
+<meta name="author" content="">
+<meta name="description" content="">
+<meta name="keywords" content="" />
+
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/static/assets/img/favicon/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/assets/img/favicon/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/assets/img/favicon/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="/static/assets/img/favicon/favicon_io/site.webmanifest">
+
+<!-- Fontawesome -->
+<link type="text/css" href="/static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+<!-- Notyf -->
+<link type="text/css" href="/static/assets/vendor/notyf/notyf.min.css" rel="stylesheet">
+
+<!-- CSS -->
+<link type="text/css" href="/static/assets/css/volt.css" rel="stylesheet">
+
+    <!-- Specific Page CSS goes HERE  -->
+    {% block stylesheets %}{% endblock stylesheets %}
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-md-none">
+        <div class="d-flex align-items-center">
+            <button class="navbar-toggler d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container-fluid bg-soft">
+        <div class="row">
+            <div class="col-12">
+
+                {% include 'includes/sidebar.html' %}
+            
+                {% block content %}{% endblock content %}
+
+            </div>
+        </div>
+    </div>
+
+    {% include 'includes/scripts.html' %}    
+    
+    <!-- Specific Page JS goes HERE  -->
+    {% block javascripts %}{% endblock javascripts %}
+
+</body>
+</html>
